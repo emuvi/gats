@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    concurrent-ruby (1.1.10)
+    power_assert (2.0.1)
+    sqlite3 (1.4.4)
+    test-unit (3.5.3)
+      power_assert
+
+PLATFORMS
+  x86_64-linux-musl
+
+DEPENDENCIES
+  concurrent-ruby
+  sqlite3
+  test-unit
+
+BUNDLED WITH
+   2.3.14

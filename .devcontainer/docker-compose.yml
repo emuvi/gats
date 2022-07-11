@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  qin_ser_qif_gats:
+    tty: true
+    stdin_open: true
+    container_name: qin_con_qif_gats
+    image: pointeldevs/stk_data
+    volumes:
+      - ${QIN_ROOT}/Work:/root
+      - ${QIN_ROOT}/Arch:/root/Arch
+      - ${QIN_ROOT}/Code:/root/Code
+      - ${QIN_ROOT}/Pool:/root/Pool
+      - ${QIN_ROOT}/Prod:/root/Prod
+      - ${QIN_ROOT}/Test:/root/Test
+      - ${QIF_GATS_SOURCE}:/workspaces/GatsSource
+      - ${QIF_GATS_DESTINY}:/workspaces/GatsDestiny
+      - ..:/workspaces/qif_gats
+    environment:
+      - QIN_ROOT=/root
+      - QIF_GATS_SOURCE=/workspaces/GatsSource
+      - QIF_GATS_DESTINY=/workspaces/GatsDestiny
+    networks:
+      - qin_net_dev
+
+networks:
+  qin_net_dev:
+    external: true

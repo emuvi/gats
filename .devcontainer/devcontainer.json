@@ -1,0 +1,5 @@
+{
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "qin_ser_qif_gats",
+  "workspaceFolder": "/workspaces/qif_gats"
+}
